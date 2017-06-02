@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Si escucho Macri yo digo Miau...">
+    <meta name="author" content="Ey Pacha!">
+
+    <title>M de Miau</title>
+	
+	<link href="icon16.png" type="image/png" rel="icon" sizes="16x16"/>
+	<link href="icon32.png" type="image/png" rel="icon" sizes="32x32"/>
+	<link href="icon48.png" type="image/png" rel="icon" sizes="48x48"/>
+	
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="M de Miau"/>
+	<meta property="og:description" content="Si escucho Macri yo digo Miau..." />
+	<meta property="og:url" content="http://macrigato.com.ar/mdemiau" />
+	<meta property="og:site_name" content="M de Miau" />
+	<meta property="og:image" content="http://macrigato.com.ar/mdemiau/ogg-image.jpg" />
+	<link rel="stylesheet" href="http://macrigato.com.ar/asset/css/bootstrap.min.css" type="text/css" media="screen"/>
+<style>
+	
+body {
+	background-color: #ffcd00;
+	color: black;
+	font-family: Verdana;
+	text-align: center;
+	padding-top: 20px;
+}	
+#title {
+	display: inline-block;
+	width: 250px;
+	height: 92px;
+	background-image: url(icon128.png);
+	background-repeat: no-repeat;
+	background-size: 92px;
+	overflow: hidden;
+	font-size: 24pt;
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-variant: small-caps;
+	}
+#title div {
+	padding-top: 25px;
+	}
+#description {
+	max-width: 450px;
+    display: inline-block;
+    text-align: justify;
+	margin-bottom: 20px;
+	}
+#subtitle {
+	display: block;
+	font-style: italic;
+	font-variant: small-caps;
+	margin-bottom: 20px;
+	}
+
+a {
+	color: black;
+	text-decoration: underline;
+	}
+a:hover {
+	color: black;
+	}
+.imagen {
+	background-color: white;
+	padding: 4px;
+	border-radius: 4px;
+	border: solid 1px #ddd;
+	}
+.imagen img {
+	width: 100%;
+	}
+.btn {
+background-color: white;
+	}
+.section-others {
+	font-size: 9pt;
+	}
+</style>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div id="title"> <div>de <big>M</big>iau</div></div>
+<div id="subtitle">Si escucho Macri yo digo Miau...</div>
+<div id="description">
+<p>Esta web tiene un sistema de reconocimiento de voz, cada vez que escuche la palabra "Macri" emitiré un maullido.</p>
+<p align="center"><i>Otra idea de <a href="">macrigato.com.ar</a></i></p>
+<p><small>(Sí, necesitás tener micrófono sí o sí. No, lamentablemente aún no funciona bie en celulares. ¿Querés ayudar? estoy en <a href="http://https://github.com/eypacha/mdemiau">GitHub</a>)</small></p>
+ </div>
+ <div>
+	<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fmacrigatismo&width=450&layout=standard&action=like&size=large&show_faces=true&share=false&height=80&appId=357514884387882" width="440" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
+        <div class="row"></div>
+        
+        <!-- Start Video Section Content -->
+        <div class="section-others text-center slider-content">
+
+          <!-- Start Animations Text -->
+        
+        <div class="row">
+
+            <!-- Start Image Service Box 1 -->
+            <div class="col-md-2 col-md-offset-4 image-service-box">
+              <a href="https://github.com/eypacha/macri-gato" target="_blank"><img class="img-thumbnail" src="http://macrigato.com.ar/prev_og_image.jpg" alt="MacriGato Web Extension">
+              <p>La extensión que cambia "Macri" por "Macri Gato" en todas las webs.</p></a>
+              
+               <div id="chrome-section">
+                <input type="button" onclick="instalarMacriGato()" id="install-button" class="slider btn btn-system btn-large" value="Añadir al Chrome"><br>
+                <a href="https://chrome.google.com/webstore/detail/macri-gato/lnjjbgjmogkocampmlmikfggonalliej" target="_blank"><i class="fa fa-chrome"></i> En el Chrome Web Store</a>
+                </div>
+               
+                <div id="firefox-section" style="display: none;">
+                 <a href="https://addons.mozilla.org/firefox/downloads/latest/macrigato/addon-745200-latest.xpi" iconurl="http://www.macrigato.com.ar/icon64.png" hash="sha1:043fa18eb6db7b23804cf09dca0b3669e127013a" onclick="return installFirefox(event);" class="slider btn btn-system btn-large">Añadir al Firefox</a><br>
+               <a href="https://addons.mozilla.org/es/firefox/addon/macrigato/" target="_blank"><i class="fa fa-firefox"></i> En el Mozilla Web Store</a>
+            </div> 
+           
+           
+             </div>
+             
+             
+<script type="application/javascript">
+function isChrome() {
+    if(navigator.userAgent.toLowerCase().indexOf("safari") >= 0 && navigator.userAgent.toLowerCase().indexOf("chrome") >= 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+function isFirefox() {
+    if(navigator.userAgent.toLowerCase().indexOf("firefox") >= 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+    
+function installFirefox (aEvent)
+{
+  for (var a = aEvent.target; a.href === undefined;) a = a.parentNode;
+  var params = {
+    "Foo": { URL: aEvent.target.href,
+             IconURL: aEvent.target.getAttribute("iconURL"),
+             Hash: aEvent.target.getAttribute("hash"),
+             toString: function () { return this.URL; }
+    }
+  };
+  InstallTrigger.install(params);
+
+  return false;
+}
+
+if (isChrome()){
+    $("#firefox-section").hide();
+}
+
+if (isFirefox()){
+    $("#chrome-section").hide();
+}
+</script>
+            <!-- End Image Service Box 1 -->
+
+            <!-- Start Image Service Box 2 -->
+            <div class="col-md-2 image-service-box">
+              <a href="macricatgo/" target="_blank"><img class="img-thumbnail" src="http://macrigato.com.ar/macricatgo/img/prev_og_image.jpg" alt="MacriCat Go!">
+				  <p>Jugá a atrapar a todos los Macrigatos antes de que se arruine el país</p></a>
+              <a href="macricatgo/" target="_blank" class="slider btn btn-system btn-large">Jugar ahora!</a><br>
+              <a href="https://github.com/eypacha/macricatgo" target="_blank"><i class="fa fa-github"></i> Proyecto en GitHub</a>
+    
+            </div>
+            <!-- End Image Service Box 2 -->
+
+          </div>
+
+          <!-- Divider -->
+          <div class="hr1" style="margin-bottom:45px;"></div>
+
+        </div>
+        <!-- End Section Content -->
+
+
+  
+</div>
+<audio id="audio-miau" src="audios/miau.mp3"></audio>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
