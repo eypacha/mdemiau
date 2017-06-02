@@ -3,7 +3,7 @@ Experimento sistema de reconocimiento de voz antimacrista, cada vez que escuche 
 
 Demo online en: [macrigato.com.ar/mdemiau](http://macrigato.com.ar/mdemiau/)
 
-[Preview](http://macrigato.com.ar/mdemiau/ogg-image.jpg)
+![Preview](http://macrigato.com.ar/mdemiau/ogg-image.jpg)
 
 ## ToDo
 
